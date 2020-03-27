@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Формат запросов
 
-Things you may want to cover:
+Получение списка спектаклей
+```
+GET [url]/perfomances
+```
 
-* Ruby version
+Добавление спектакля
 
-* System dependencies
+```
+POST [url]/perfomances
+Content-Type: application/json
+пример json
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+{
+	"performance": {
+		"name": "Ромео и Джульетта",
+		"duration": {
+			"start_date": "2018-07-30", 
+			"end_date": "2018-08-31"
+		}
+	}
+}
+```
